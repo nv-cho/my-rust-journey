@@ -31,3 +31,12 @@ fn statement() {
 }
 
 /* Las llamadas a funciones, macros, crear un nuevo scope con llaves son todos ejemplos de expresiones */
+fn block() -> i32 {
+
+    {
+        let x = 5;
+    
+        /* Las expresiones no incluyen punto y coma, añadir ";" al final de una expresión lo transforma en un statement y no devuelve ningun valor */
+        x + 5 
+    } 
+} 
