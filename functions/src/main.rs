@@ -40,3 +40,13 @@ fn block() -> i32 {
         x + 5 
     } 
 } 
+
+fn sum(x: i32) -> i32 {
+    x + 10
+}
+
+fn print_value() {
+    let y = sum(2);
+
+    println!("The value of y is: {y}");
+} 
