@@ -44,4 +44,15 @@ fn main() {
     /* Tambien podemos acceder a sus valores mediante puntos */
     let five_hundred = tup.0;
     println!("The value of five_hundred is: {five_hundred}");
+
+    /* Los arrays son un tipo de dato que permite alojar multiples datos del mismo tipo, en Rust, los arrays tienen que tener un largo determinado */
+    let n = [1, 10, 20];
+
+    /* Tambien se pueden inicializar para que tengan un mismo valor una cantidad determinada de veces, el siguiente ejemplo es lo mismo que escribir [3, 3, 3, 3, 3] */
+    let s = [3; 5];
+
+    /* Para acceder a los elementos de un array lo hacemos mediante un indice accediendo a las distintas posiciones del array */
+    let first = n[0];
+
+    /* Si intentamos acceder a un indice que excede al largo del array el compiladora paniqueara (panic compilation) devolviendo un error con el objetivo de proteger la memoría */
 }
