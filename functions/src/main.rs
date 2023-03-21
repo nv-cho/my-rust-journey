@@ -47,6 +47,6 @@ fn sum(x: i32) -> i32 {
 
 fn print_value() {
     let y = sum(2);
-
+    
     println!("The value of y is: {y}");
 } 
