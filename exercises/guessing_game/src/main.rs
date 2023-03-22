@@ -69,6 +69,7 @@ fn main() {
             Ordering::Greater => println!("Too big!"),
             Ordering::Equal => {
                 println!("You win!");
+                // "_" es un valor que significa "matchea cualquier cosa", en este caso se lo pasamos a Err para decir que queremos coincidir con cualquier error
                 break;
             }
         }
