@@ -60,6 +60,7 @@ fn main() {
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
+            // "_" es un valor que significa "matchea cualquier cosa", en este caso se lo pasamos a Err para decir que queremos coincidir con cualquier error
         };
 
         println!("You guessed: {guess}");
@@ -69,7 +70,6 @@ fn main() {
             Ordering::Greater => println!("Too big!"),
             Ordering::Equal => {
                 println!("You win!");
-                // "_" es un valor que significa "matchea cualquier cosa", en este caso se lo pasamos a Err para decir que queremos coincidir con cualquier error
                 break;
             }
         }
