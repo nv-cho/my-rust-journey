@@ -1,0 +1,13 @@
+[package]
+name = "problem_2"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+# Un crate (paquete) es un conjunto de archivos de codigo fuente. Los "binary crate" son crate's que generan un archivo ejecutable, y los "library crate" son crate's que no generan un archivo ejecutable, sino que son usados por otros crate's para agregar funcionalidad. En este caso, el crate es un "binary crate" porque genera un archivo ejecutable.
+[dependencies]
+
+#Aqui estamos indicandole a Cargo que rand es un "library crate", es decir un crate que contiene codigo con la intención de ser utilizado en otros programas, como en este
+rand = "0.8.3"
