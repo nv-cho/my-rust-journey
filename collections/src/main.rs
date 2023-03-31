@@ -42,6 +42,17 @@ fn main() {
 
     let mut mut_point = Point { x: 5, y: 3, z: 7 };
     mut_point.x = 10;
+
+    /* Asi es como se define un array, todos los elementos del array tienen que tener el mismo tipo, y su tamaño nunca va a cambiar, siempre va a ser el mismo con el cual se define */
+    let mut years: [i32; 3] = [1995, 2000, 2005];
+
+    let first_year = years[0];
+    let [_, second_year, third_year] = years;
+
+    /* Los arrays nos permiten iterar sobre ellos */
+    for year in years.iter() {
+        print!("Next year: {}", year + 1)
+    }
 }
 
 /* Las funciones unit se pueden utilizar para especificar como para los casos en los cuales no hay ningun valor retornado */
