@@ -16,12 +16,32 @@ fn main() {
     /* Para volver mutables a los valores de una tupla, añadimos la palabra mut */
     let mut point_2: (i64, i32, u64) = (0, 0, 0);
 
-    point.0 = 17;
-    point.1 = 42;
-    point.2 = 90;
+    point_2.0 = 17;
+    point_2.1 = 42;
+    point_2.2 = 90;
 
     /* Tuplas sin ningun valor, son llamadas units y no pueden contener ningun valor, y aseguran que no contienen ningun valor */
     let unit: () = ();
+
+    /* Esta es la forma de declarar estructuras */
+    struct Point {
+        x: i64,
+        y: i64,
+        z: i64,
+    }
+
+    fn new_point(x: i64, y: i64, z: i64) -> Point {
+        Point { x, y, z } // equals to: Point { x: x, y: y, z: z }
+    }
+
+    let point = Point { x: 1, y: 2, z: 3 };
+
+    /* Puedo acceder a los valores de forma individual o desestructurandolos */
+    let x = point.x;
+    let Point { x, y, z } = point;
+
+    let mut mut_point = Point { x: 5, y: 3, z: 7 };
+    mut_point.x = 10;
 }
 
 /* Las funciones unit se pueden utilizar para especificar como para los casos en los cuales no hay ningun valor retornado */
